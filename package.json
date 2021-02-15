@@ -1,6 +1,6 @@
 {
   "name": "react-animejs-wrapper",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A wrapper to easily use Anime.js in React.",
   "main": "index.js",
   "types": "lib/index.d.ts",
