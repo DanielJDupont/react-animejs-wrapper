@@ -40,6 +40,6 @@ export const myAnimeComponent = () => {
     <Anime>
       <div>Hello</div>
     </Anime>
-  )  
+  )
 }
 ```
