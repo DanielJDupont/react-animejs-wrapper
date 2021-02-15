@@ -6,7 +6,7 @@
 
 Allows the use of Anime.js with React JSX elements to quickly and easily use powerful animations.
 
-This package was also created to meet the needs of the Interview Py, which is a comprehensive interview prepration resource that prepares software developers and engineers for coding interviews with Python.
+This package was also created to meet the needs of Interview Py. It is a comprehensive language focused interview prepration resource that prepares software developers and engineers for coding interviews using Python.
 
 ### Installation
 
@@ -27,6 +27,3 @@ yarn add react-animejs-wrapper
 ```txt
 <Anime></ Anime>
 ```
-
-
-
