@@ -10,7 +10,7 @@ Intended to be used with Next.js and with TypeScript but it should work with Rea
 
 This package was also created to meet the needs of Interview Py. It is a comprehensive interview prepration resource that prepares software developers and engineers for coding interviews using Python.
 
-### Installation
+## Installation
 
 Using npm:
 
