@@ -26,7 +26,7 @@ yarn add react-animejs-wrapper
 
 ## Easy to Use Examples
 
-Make sure to include your import for each file that uses Anime tags:
+Make sure to include your import:
 
 ```txt
 import Anime from 'react-anime-wrapper
