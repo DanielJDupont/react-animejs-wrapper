@@ -1,8 +1,6 @@
 # Under Construction
 
-## This npm package is not ready for use and is still under development
-
----
+This npm package is not ready for use and is still under development
 
 ## React Animejs Wrapper
 
@@ -11,7 +9,6 @@ Allows the use of Anime.js with React JSX elements to quickly and easily use pow
 This package was also created to meet the needs of Interview Py. It is a comprehensive interview prepration resource that prepares software developers and engineers for coding interviews using Python.
 
 ### Installation
-
 
 Using npm:
 
