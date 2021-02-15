@@ -2,4 +2,31 @@
 
 ## This npm package is not ready for use and is still under development
 
-Currently in the process of bringing in the files that will make this package.
+## React Animejs Wrapper
+
+Allows the use of Anime.js with React JSX elements to quickly and easily use powerful animations.
+
+This package was also created to meet the needs of the Interview Py, which is a comprehensive interview prepration resource that prepares software developers and engineers for coding interviews with Python.
+
+### Installation
+
+Using npm yarn:
+
+```sh
+npm i react-animejs-wrapper
+```
+
+Using yarn:
+
+```sh
+yarn add react-animejs-wrapper
+```
+
+## Easy to Use Examples
+
+```txt
+<Anime></ Anime>
+```
+
+
+
