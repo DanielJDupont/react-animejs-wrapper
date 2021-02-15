@@ -4,7 +4,7 @@ This npm package is not ready for use and is still under development.
 
 ## React Animejs Wrapper
 
-Allows the use of Anime.js with React JSX elements to quickly and easily use powerful animations.
+Allows the use of Anime.js with React JSX elements to quickly and easily create powerful animations.
 
 Intended to be used with Next.js and with TypeScript but it should work with React and JavaScript as is.
 
