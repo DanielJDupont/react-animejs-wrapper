@@ -8,7 +8,7 @@ interface AllProps extends AnimeParams {
 }
 
 export const Anime = (props: AllProps) => {
-  let targetRefs: any[] = [];
+  const targetRefs: any[] = [];
 
   // UseEffect to component mount run createAnime() function.
   // Only plays the animation upon component mount.
@@ -19,14 +19,14 @@ export const Anime = (props: AllProps) => {
   const createAnime = () => {
     // Attach the targetRefs to targets.
     const targets = [];
-    for (let ref of targetRefs) {
+    for (const ref of targetRefs) {
       if (ref.current) {
         targets.push(ref.current);
       }
     }
 
     // Mutable pattern, replace this with const.
-    let animeProps = { ...props, targets: targets };
+    const animeProps = { ...props, targets };
 
     // Delete the property of children from the anime props.
     delete animeProps.children;
