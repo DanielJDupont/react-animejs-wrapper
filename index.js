@@ -1,3 +1,3 @@
-import { anime } from './components/anime';
+import { Anime } from './components/Anime';
 
-export default anime;
+export default Anime;
