@@ -1,6 +1,6 @@
 # Under Construction
 
-This npm package is not ready for use and is still under development
+This npm package is not ready for use and is still under development.
 
 ## React Animejs Wrapper
 
