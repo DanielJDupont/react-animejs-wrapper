@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, createRef } from 'react';
+import { Fragment, useEffect, createRef } from 'react';
 import anime, { AnimeParams } from 'animejs';
 
 // Use the types from @types/animejs in addition to a children and svg fields.
@@ -8,7 +8,7 @@ interface AllProps extends AnimeParams {
 }
 
 export const Anime = (props: AllProps) => {
-  let targetRefs = [];
+  let targetRefs: any[] = [];
 
   // UseEffect to component mount run createAnime() function.
   // Only plays the animation upon component mount.
@@ -40,9 +40,7 @@ export const Anime = (props: AllProps) => {
   };
 
   // Force the children to be in a list if there is only 1 child, so the .map() always works in the render.
-  const children = Array.isArray(props.children)
-    ? props.children
-    : [props.children];
+  const children = Array.isArray(props.children) ? props.children : [props.children];
 
   // Not sure what this does.
   const refs = targetRefs;
