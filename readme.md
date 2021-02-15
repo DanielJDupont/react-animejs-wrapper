@@ -6,6 +6,8 @@ This npm package is not ready for use and is still under development.
 
 Allows the use of Anime.js with React JSX elements to quickly and easily use powerful animations.
 
+Intended to be used with Next.js and with TypeScript but it should work with React and JavaScript as is.
+
 This package was also created to meet the needs of Interview Py. It is a comprehensive interview prepration resource that prepares software developers and engineers for coding interviews using Python.
 
 ### Installation
@@ -24,6 +26,20 @@ yarn add react-animejs-wrapper
 
 ## Easy to Use Examples
 
+Make sure to include this line at the top of each file using Anime tags:
+
 ```txt
-<Anime></ Anime>
+import Anime from 'react-anime-wrapper
+```
+
+Examples of components using this library:
+
+```txt
+export const myAnimeComponent = () => {
+  return (
+    <Anime>
+      <div>Hello</div>
+    </Anime>
+  )  
+}
 ```
