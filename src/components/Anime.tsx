@@ -1,4 +1,4 @@
-import { Fragment, useEffect, createRef } from 'react';
+import React, { Fragment, useEffect, createRef } from 'react';
 import anime, { AnimeParams } from 'animejs';
 
 // Use the types from @types/animejs in addition to a children and svg fields.
