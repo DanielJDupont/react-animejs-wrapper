@@ -2,7 +2,7 @@
   "name": "react-animejs-wrapper",
   "version": "1.0.7",
   "description": "A wrapper to easily use Anime.js in React.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
