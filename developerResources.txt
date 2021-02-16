@@ -1,0 +1,4 @@
+Some resources that are useful to reference during development.
+
+Use incognito mode to view:
+https://itnext.io/step-by-step-building-and-publishing-an-npm-typescript-package-44fe7164964c
