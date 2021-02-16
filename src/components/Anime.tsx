@@ -17,8 +17,9 @@ export const Anime = (props: AllProps) => {
   }, []);
 
   const createAnime = () => {
-    // Attach the targetRefs to targets.
     const targets = [];
+
+    // Attach the targetRefs to targets.
     for (const ref of targetRefs) {
       if (ref.current) {
         targets.push(ref.current);
