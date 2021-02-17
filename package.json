@@ -13,10 +13,10 @@
     "build": "rollup -c",
     "start": "rollup -c -w"
   },
-  "peerDependencies": {
-    "animejs": "^3.2.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+  "dependencies": {
+    "react": ">= 16.8.0 < 2",
+    "react-dom": ">= 16.8.0 < 2",
+    "animejs": ">= 3.0.1"
   },
   "devDependencies": {
     "rollup": "^2.39.0",
