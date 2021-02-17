@@ -1,5 +1,7 @@
 import sass from 'rollup-plugin-sass';
 import typescript from 'rollup-plugin-typescript2';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 
 import pkg from './package.json';
 
@@ -14,6 +16,6 @@ export default {
       strict: false,
     },
   ],
-  plugins: [sass({ insert: true }), typescript()],
-  external: ['react', 'react-dom'],
+  plugins: [sass({ insert: true }), typescript(), resolve(), commonjs()],
+  external: ['react', 'react-dom', 'animejs'],
 };
