@@ -16,12 +16,14 @@ Using npm:
 
 ```sh
 npm i react-animejs-wrapper
+npm i animejs
 ```
 
 Using yarn:
 
 ```sh
 yarn add react-animejs-wrapper
+yarn add animejs
 ```
 
 ## Easy to Use Examples
