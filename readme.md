@@ -12,19 +12,21 @@ This package was also created to meet the needs of **Interview Py**. Interview P
 
 ## Installation
 
+You need to install react-animejs-wrapper and it's dependency animejs.
+
 Using npm:
 
 ```sh
-npm i react-animejs-wrapper
-npm i animejs
+npm i react-animejs-wrapper animejs
 ```
 
 Using yarn:
 
 ```sh
-yarn add react-animejs-wrapper
-yarn add animejs
+yarn add react-animejs-wrapper animejs
 ```
+
+Designed for React 17.0.1, though it should work for any relatively recent version of React.
 
 ## Easy to Use Examples
 
