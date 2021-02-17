@@ -12,11 +12,8 @@ export const Anime = (props: AllProps) => {
 
   // UseEffect to component mount run createAnime() function.
   // Only plays the animation upon component mount.
-  const createAnimeNoHook = () => {
-    createAnime();
-  };
   useEffect(() => {
-    createAnimeNoHook();
+    createAnime();
   }, []);
 
   const createAnime = () => {

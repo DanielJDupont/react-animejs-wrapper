@@ -2,26 +2,28 @@
   "name": "react-animejs-wrapper",
   "version": "1.0.7",
   "description": "A wrapper to easily use Anime.js in React.",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "scripts": {
-    "test": "jest --config jestconfig.json",
-    "build": "tsc",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
-  },
   "author": "Daniel Dupont",
   "license": "ISC",
-  "dependencies": {
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w"
+  },
+  "peerDependencies": {
     "animejs": "^3.2.1",
-    "react": "^17.0.1"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "rollup": "^2.39.0",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "rollup-plugin-sass": "^1.2.2",
+    "rollup-plugin-typescript2": "^0.29.0",
     "@types/animejs": "^3.1.2",
     "@types/jest": "^26.0.20",
     "@types/react": "^17.0.2",
