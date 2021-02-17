@@ -26,7 +26,7 @@ Using yarn:
 yarn add react-animejs-wrapper animejs
 ```
 
-Designed for React 17.0.1, though it should work for any relatively recent version of React.
+Designed for React 17.0.1. It should work for any relatively recent version of React.
 
 ## Easy to Use Examples
 
