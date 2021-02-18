@@ -1,10 +1,10 @@
 {
-  "name": "rollup-practice",
-  "version": "1.0.0",
-  "description": "A template for publishing a React + TypeScript package to npm",
-  "author": "ovieokeh",
-  "license": "Apache-2.0",
-  "repository": "ovieokeh/rollup-practice",
+  "name": "react-animejs-wrapper",
+  "version": "1.0.8",
+  "description": "A React wrapper for the Anime.js animation library. Allows for the quick and easy creation of powerful animations using React's JSX tags.",
+  "author": "Daniel Dupont",
+  "license": "ISC",
+  "repository": "https://github.com/DanielJDupont/react-animejs-wrapper",
   "main": "dist/index.js",
   "engines": {
     "node": ">=8",
@@ -39,6 +39,15 @@
   "keywords": [
     "react",
     "typescript",
-    "npm"
+    "npm",
+    "wrapper",
+    "animation",
+    "animations",
+    "nextjs",
+    "npm-package",
+    "wrapper-api",
+    "animejs",
+    "anime.js",
+    "anime"
   ]
 }
