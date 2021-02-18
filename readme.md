@@ -38,7 +38,7 @@ import Anime from 'react-anime-wrapper
 
 Some blue squares sliding back and forth:
 
-```txt
+```jsx
 export const myAnimeComponent = () => {
   const blueSquare = {
     height: '20px',
@@ -71,7 +71,7 @@ export const myAnimeComponent = () => {
 
 Attach a reference to the <Anime></Anime> component, then you can access the controls within the component directly through the reference.
 
-```txt
+```jsx
 export const myAnimeComponent = () => {
   const blueSquare = {
     height: '20px',
