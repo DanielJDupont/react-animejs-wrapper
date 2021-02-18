@@ -36,14 +36,81 @@ Make sure to include your import:
 import Anime from 'react-anime-wrapper
 ```
 
-Examples of components using this library:
+Some blue squares sliding back and forth:
 
 ```txt
 export const myAnimeComponent = () => {
+  const blueSquare = {
+    height: '20px',
+    width: '20px',
+    backgroundColor: 'lightblue',
+  };
+
   return (
-    <Anime>
-      <div>Hello</div>
+    <Anime
+      animeConfig={{
+        translateX: 250,
+        delay: function (_, i) {
+          return i * 100;
+        },
+        loop: true,
+        direction: 'alternate',
+        easing: 'easeInOutSine',
+        autoplay: true,
+      }}
+    >
+      <div style={blueSquare}>1</div>
+      <div style={blueSquare}>2</div>
+      <div style={blueSquare}>3</div>
     </Anime>
   )
 }
+```
+
+## Examples with Animation Controls
+
+Attach a reference to the <Anime></Anime> component, then you can access the controls within the component directly through the reference.
+
+```txt
+export const myAnimeComponent = () => {
+  const blueSquare = {
+    height: '20px',
+    width: '20px',
+    backgroundColor: 'lightGreen',
+  };
+
+  const animatedSquaresRef = useRef(null)
+
+  if (animatedSquaresRef) {
+    animatedSquareRef.current.restart()
+    animatedSquareRef.current.pause()
+    animatedSquareRef.current.play()
+    animatedSquareRef.current.reverse()
+    // Go to a specific time in the animation in miliseconds
+    animatedSquareRef.current.seek(1000)
+    // Go to a specific time as a percentage of the duration of the animation, 50% in this case.
+    animatedSquareRef.current.seekPercent(50)
+  }
+
+  return (
+    <Anime
+      ref={animatedSquaresRef}
+      animeConfig={{
+        translateX: 250,
+        delay: function (_, i) {
+          return i * 100;
+        },
+        loop: true,
+        direction: 'alternate',
+        easing: 'easeInOutSine',
+        autoplay: true,
+      }}
+    >
+      <div style={blueSquare}>1</div>
+      <div style={blueSquare}>2</div>
+      <div style={blueSquare}>3</div>
+    </Anime>
+  )
+}
+
 ```

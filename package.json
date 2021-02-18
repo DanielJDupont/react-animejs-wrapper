@@ -1,9 +1,10 @@
 {
-  "name": "react-animejs-wrapper",
-  "version": "1.0.7",
-  "description": "A wrapper to easily use Anime.js in React.",
-  "author": "Daniel Dupont",
-  "license": "ISC",
+  "name": "rollup-practice",
+  "version": "1.0.0",
+  "description": "A template for publishing a React + TypeScript package to npm",
+  "author": "ovieokeh",
+  "license": "Apache-2.0",
+  "repository": "ovieokeh/rollup-practice",
   "main": "dist/index.js",
   "engines": {
     "node": ">=8",
@@ -13,46 +14,31 @@
     "build": "rollup -c",
     "start": "rollup -c -w"
   },
-  "dependencies": {
-    "react": ">= 16.8.0 < 2",
-    "react-dom": ">= 16.8.0 < 2",
-    "animejs": ">= 3.0.1"
+  "peerDependencies": {
+    "animejs": "^3.2.1"
   },
   "devDependencies": {
-    "rollup": "^2.39.0",
+    "@types/react": "^17.0.1",
+    "@types/react-dom": "^17.0.1",
+    "@types/animejs": "^3.1.2",
+    "animejs": "^3.2.1",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
+    "react": "link:/home/dan/Desktop/interactive_graph_algorithm_visualizer/node_modules/react",
+    "react-dom": "link:/home/dan/Desktop/interactive_graph_algorithm_visualizer/node_modules/react-dom",
+    "rollup": "^2.39.0",
     "rollup-plugin-sass": "^1.2.2",
-    "rollup-plugin-typescript2": "^0.29.0",
-    "@types/animejs": "^3.1.2",
-    "@types/jest": "^26.0.20",
-    "@types/react": "^17.0.2",
-    "jest": "^26.6.3",
-    "prettier": "^2.2.1",
-    "ts-jest": "^26.5.1",
-    "tslint": "^6.1.3",
-    "tslint-config-prettier": "^1.18.0",
+    "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "^4.1.5",
-    "@rollup/plugin-node-resolve": "11.2.0",
-    "@rollup/plugin-commonjs": "17.1.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/DanielJDupont/react-animejs-wrapper"
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "@rollup/plugin-commonjs": "^17.1.0"
   },
   "files": [
-    "lib/**/*"
+    "dist"
   ],
   "keywords": [
-    "animejs",
-    "anime.js",
-    "anime",
     "react",
-    "next",
-    "nextjs",
-    "next.js",
-    "animation",
-    "wrapper",
-    "adapter"
+    "typescript",
+    "npm"
   ]
 }

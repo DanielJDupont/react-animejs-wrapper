@@ -1,64 +1,72 @@
-import React, { Fragment, useEffect, createRef } from 'react';
-import anime, { AnimeParams } from 'animejs';
+import React, { useRef, useEffect, forwardRef, useImperativeHandle } from 'react';
+import anime, { AnimeInstance } from 'animejs';
 
-// Use the types from @types/animejs in addition to a children and svg fields.
-interface AllProps extends AnimeParams {
+interface AnimeProps {
+  className?: string;
+  animeConfig: any;
   children: React.ReactNode;
-  svg?: boolean;
 }
 
-export const Anime = (props: AllProps) => {
-  const targetRefs: any[] = [];
+// Need to use a forwardRef, obtaining a ref from the parent to allow the use of controls.
+const Anime = forwardRef((props: AnimeProps, ref) => {
+  if (typeof window === 'undefined') {
+    return <div className={props.className} />;
+  }
 
-  // UseEffect to component mount run createAnime() function.
-  // Only plays the animation upon component mount.
+  console.log(props.children);
+
+  const animeInstance = useRef<AnimeInstance>(anime({}));
+
   useEffect(() => {
-    createAnime();
-  }, []);
+    console.log(document.querySelectorAll('.__anime__'));
 
-  const createAnime = () => {
-    const targets = [];
+    // Cleanup any other wandering anime tags.
+    anime.remove('.__anime__');
 
-    // Attach the targetRefs to targets.
-    for (const ref of targetRefs) {
-      if (ref.current) {
-        targets.push(ref.current);
-      }
-    }
+    const myAnimeInstance = anime({
+      targets: document.querySelectorAll('.__anime__'),
+      ...props.animeConfig,
+    });
 
-    // Mutable pattern, replace this with const.
-    const animeProps = { ...props, targets };
+    animeInstance.current = myAnimeInstance;
+  }, [props, props.animeConfig, props.children]);
 
-    // Delete the property of children from the anime props.
-    delete animeProps.children;
+  useEffect(() => {
+    console.log(animeInstance);
+  }, [animeInstance]);
 
-    // Delete the property of children from the svg.
-    delete animeProps.svg;
+  // Setup controls here.
+  useImperativeHandle(ref, () => ({
+    restart() {
+      animeInstance.current.restart();
+    },
+    play() {
+      animeInstance.current.play();
+    },
+    pause() {
+      animeInstance.current.pause();
+    },
+    reverse() {
+      animeInstance.current.reverse();
+    },
+    seek(timeStamp: number) {
+      animeInstance.current.seek(timeStamp);
+    },
+    seekPercent(scrollPercent: number) {
+      animeInstance.current.seek((scrollPercent / 100) * animeInstance.current.duration);
+    },
+  }));
 
-    // Create an instance of anime with the anime() constructor. Not sure how it is used from here.
-    // I think that our key of __anime__ will grab whatever is created by anime().
-    anime(animeProps);
-  };
-
-  // Force the children to be in a list if there is only 1 child, so the .map() always works in the render.
-  const children = Array.isArray(props.children) ? props.children : [props.children];
-
-  // Not sure what this does.
-  const refs = targetRefs;
+  const childArray = Array.isArray(props.children) ? props.children : [props.children];
 
   return (
-    <Fragment>
-      {children.map((child, i) => {
-        refs.push(createRef());
-        const El = props.svg ? 'g' : 'div';
-        return (
-          <El ref={refs[refs.length - 1]} key={`${'__anime__'}${i}`}>
-            {child}
-          </El>
-        );
-      })}
-    </Fragment>
+    <div className={props.className}>
+      {childArray.map((child) => (
+        // Wrap the user's elements with a div containing the __anime__ tag so we can apply the animations to them.
+        <div className="__anime__">{child}</div>
+      ))}
+    </div>
   );
-};
+});
 
 export default Anime;
