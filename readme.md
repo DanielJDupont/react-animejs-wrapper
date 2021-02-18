@@ -33,7 +33,7 @@ Designed for React 17.0.1. It should work for any relatively recent version of R
 Make sure to include your import:
 
 ```jsx
-import Anime from 'react-anime-wrapper
+import Anime from 'react-anime-wrapper'
 ```
 
 Some blue squares sliding back and forth:
