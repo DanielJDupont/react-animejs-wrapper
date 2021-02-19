@@ -11,12 +11,14 @@ Features are still being developed locally, some features that are working local
 - No need to specify the 'targets' field in animeConfig as the target css selectors will be automatically created for the child elements of `<Anime></Anime>` components. The default css target generator can be overriden and done manually by simply providing your own targets field in the animeConfig object if needed.
 
 - The ability to use the Anime.js controls with a simple `const myRef = useRef(null)` attached to the `<Anime ref={myRef}></Anime>` component, allowing that animation to:
-- 1. `myRef.current.play()`
-- 2. `myRef.current.pause()`
-- 3. `myRef.current.restart()`
-- 4. `myRef.current.reverse()`
-- 5. `myRef.current.seek(miliseconds)`
-- 6. `myRef.current.seekPercent(percentage)`
+  
+  ```jsx
+  myRef.current.play()
+  myRef.current.pause()
+  myRef.current.restart()
+  myRef.current.reverse()
+  myRef.current.seek(miliseconds)
+  myRef.current.seekPercent(percentage)```
 
 A prominent bug is how hotloading seems to meddle with the parameters of currently existing anime() instances, causing the animations to change behaviour. This is easy to deal with by refreshing the page.
 
