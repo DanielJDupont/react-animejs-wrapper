@@ -2,6 +2,18 @@
 
 **This npm package is not ready for use and is still under early development.**
 
+The package has not been properly configured to allow others to install and use it.
+
+Features are still being developed locally, some features that are working locally include:
+
+- The ability to easy copy everything in the anime() constructor examples from https://animejs.com/documentation into the animeConfig of <Anime animeConfig={}></Anime> components, and for the children of the components animate as expected according to that documentation.
+
+- No need to specify the 'targets' field in animeConfig as the target css selectors will be automatically created for the child elements of <Anime></Anime> components. The default css target generator can be overriden and done manually by simply providing your own targets field in the animeConfig object.
+
+- The ability to use the Anime.js controls with a simple useRef attached to the `<Anime></Anime>`{:.jsx} component, allow that animation to: play(), pause(), restart(), reverse(), seek(miliseconds), and seekPercent(percentage).
+
+A prominent bug is how hotloading seems to meddle with the parameters of currently existing anime() instances, causing the animations to change behaviour. This is easy to deal with by refreshing the page.
+
 ## React Animejs Wrapper
 
 Allows the use of Anime.js with React JSX elements to quickly and easily create powerful animations.
