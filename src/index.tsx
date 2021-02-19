@@ -3,6 +3,7 @@ import anime, { AnimeInstance } from 'animejs';
 
 interface AnimeProps {
   className?: string;
+  style?: object;
   animeConfig: any;
   children: React.ReactNode;
 }
@@ -60,7 +61,7 @@ const Anime = forwardRef((props: AnimeProps, ref) => {
   const childArray = Array.isArray(props.children) ? props.children : [props.children];
 
   return (
-    <div className={props.className}>
+    <div className={props.className} style={props.style}>
       {childArray.map((child) => (
         // Wrap the user's elements with a div containing the __anime__ tag so we can apply the animations to them.
         <div className="__anime__">{child}</div>
