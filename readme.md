@@ -6,11 +6,11 @@ The package has not been properly configured to allow others to install and use 
 
 Features are still being developed locally, some features that are working locally include:
 
-- The ability to easy copy everything in the `anime()` constructor examples from [the Anime.js documentation](https://animejs.com/documentation) into the animeConfig of `<Anime animeConfig={}></Anime>` components, and for the children of the components animate as expected according to that documentation.
+- The ability to easy copy everything in the `anime()` constructor examples from [the Anime.js documentation](https://animejs.com/documentation) into the animeConfig of `<Anime animeConfig={}></Anime>` components.
 
-- No need to specify the 'targets' field in animeConfig as the target css selectors will be automatically created for the child elements of `<Anime></Anime>` components. The default css target generator can be overriden and done manually by simply providing your own targets field in the animeConfig object.
+- No need to specify the 'targets' field in animeConfig as the target css selectors will be automatically created for the child elements of `<Anime></Anime>` components. The default css target generator can be overriden and done manually by simply providing your own targets field in the animeConfig object if needed.
 
-- The ability to use the Anime.js controls with a simple useRef attached to the `<Anime></Anime>` component, allow that animation to: play(), pause(), restart(), reverse(), seek(miliseconds), and seekPercent(percentage).
+- The ability to use the Anime.js controls with a simple `const myRef = useRef(null)` attached to the `<Anime ref={myRef}></Anime>` component, allow that animation to: `myRef.current.play()`, `myRef.current.pause()`, `myRef.current.restart()`, `myRef.current.reverse()`, `myRef.current.seek(miliseconds)`, and myRef.`current.seekPercent(percentage)`.
 
 A prominent bug is how hotloading seems to meddle with the parameters of currently existing anime() instances, causing the animations to change behaviour. This is easy to deal with by refreshing the page.
 
