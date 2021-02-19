@@ -96,7 +96,6 @@ export const myAnimeComponent = () => {
       <button onClick={reverse}>Reverse Animation</button>
       <button onClick={seek}>Seek to 1000 ms</button>
       <button onClick={seekPercent}>Seek to 50%</button>
-      <div className={styles.matrixTitle}>Square Grid</div>
       <Anime
         ref={animatedSquaresRef}
         animeConfig={{
