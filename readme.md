@@ -18,7 +18,8 @@ Features are still being developed locally, some features that are working local
   myRef.current.restart()
   myRef.current.reverse()
   myRef.current.seek(miliseconds)
-  myRef.current.seekPercent(percentage)```
+  myRef.current.seekPercent(percentage)
+  ```
 
 A prominent bug is how hotloading seems to meddle with the parameters of currently existing anime() instances, causing the animations to change behaviour. This is easy to deal with by refreshing the page.
 
