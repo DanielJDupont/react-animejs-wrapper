@@ -111,12 +111,6 @@ export const myAnimeComponent = () => {
 
   return (
     <div>
-      <button onClick={restart}>Reset Animation</button>
-      <button onClick={play}>Play Animation</button>
-      <button onClick={pause}>Pause Animation</button>
-      <button onClick={reverse}>Reverse Animation</button>
-      <button onClick={seek}>Seek to 1000 ms</button>
-      <button onClick={seekPercent}>Seek to 50%</button>
       <Anime
         ref={animatedSquaresRef}
         animeConfig={{
@@ -134,6 +128,12 @@ export const myAnimeComponent = () => {
         <div style={blueSquare}>2</div>
         <div style={blueSquare}>3</div>
       </Anime>
+      <button onClick={restart}>Reset Animation</button>
+      <button onClick={play}>Play Animation</button>
+      <button onClick={pause}>Pause Animation</button>
+      <button onClick={reverse}>Reverse Animation</button>
+      <button onClick={seek}>Seek to 1000 ms</button>
+      <button onClick={seekPercent}>Seek to 50%</button>
     </div>
   )
 }
