@@ -81,11 +81,11 @@ export const myAnimeComponent = () => {
 
   const animatedSquaresRef = useRef(null)
 
-  const restart = () => animatedSquaresRef?.current.restart();
-  const play = () => animatedSquaresRef?.current.play();
+  const restart = () => animatedSquaresRef.current.restart();
+  const play = () => animatedSquaresRef.current.play();
   const pause = () => animatedSquaresRef.current.pause();
-  const reverse = () => animatedSquaresRef?.current.reverse();
-  const seek = () => animatedSquaresRef?.current.seek(1000);
+  const reverse = () => animatedSquaresRef.current.reverse();
+  const seek = () => animatedSquaresRef.current.seek(1000);
   const seekPercent = () => animatedSquaresRef.current.seekPercent(50);
 
   return (
