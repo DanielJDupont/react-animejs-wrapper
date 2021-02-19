@@ -10,7 +10,7 @@ Features are still being developed locally, some features that are working local
 
 - No need to specify the 'targets' field in animeConfig as the target css selectors will be automatically created for the child elements of `<Anime></Anime>` components. The default css target generator can be overriden and done manually by simply providing your own targets field in the animeConfig object if needed.
 
-- The ability to use the Anime.js controls with a simple `const myRef = useRef(null)` attached to the `<Anime ref={myRef}></Anime>` component, allowing that animation to:
+- The ability to use the Anime.js controls with a simple `const myRef = useRef(null)` attached to the `<Anime ref={myRef}></Anime>` component, allowing that animation do the following:
   
   ```jsx
   myRef.current.play()
