@@ -81,35 +81,40 @@ export const myAnimeComponent = () => {
 
   const animatedSquaresRef = useRef(null)
 
-  if (animatedSquaresRef) {
-    animatedSquareRef.current.restart()
-    animatedSquareRef.current.pause()
-    animatedSquareRef.current.play()
-    animatedSquareRef.current.reverse()
-    // Go to a specific time in the animation in miliseconds
-    animatedSquareRef.current.seek(1000)
-    // Go to a specific time as a percentage of the duration of the animation, 50% in this case.
-    animatedSquareRef.current.seekPercent(50)
-  }
+  const restart = () => animatedSquaresRef?.current.restart();
+  const play = () => animatedSquaresRef?.current.play();
+  const pause = () => animatedSquaresRef.current.pause();
+  const reverse = () => animatedSquaresRef?.current.reverse();
+  const seek = () => animatedSquaresRef?.current.seek(1000);
+  const seekPercent = () => animatedSquaresRef.current.seekPercent(50);
 
   return (
-    <Anime
-      ref={animatedSquaresRef}
-      animeConfig={{
-        translateX: 250,
-        delay: function (_, i) {
-          return i * 100;
-        },
-        loop: true,
-        direction: 'alternate',
-        easing: 'easeInOutSine',
-        autoplay: true,
-      }}
-    >
-      <div style={blueSquare}>1</div>
-      <div style={blueSquare}>2</div>
-      <div style={blueSquare}>3</div>
-    </Anime>
+    <div>
+      <button onClick={restart}>Reset Animation</button>
+      <button onClick={play}>Play Animation</button>
+      <button onClick={pause}>Pause Animation</button>
+      <button onClick={reverse}>Reverse Animation</button>
+      <button onClick={seek}>Seek to 1000 ms</button>
+      <button onClick={seekPercent}>Seek to 50%</button>
+      <div className={styles.matrixTitle}>Square Grid</div>
+      <Anime
+        ref={animatedSquaresRef}
+        animeConfig={{
+          translateX: 250,
+          delay: function (_, i) {
+            return i * 100;
+          },
+          loop: true,
+          direction: 'alternate',
+          easing: 'easeInOutSine',
+          autoplay: true,
+        }}
+      >
+        <div style={blueSquare}>1</div>
+        <div style={blueSquare}>2</div>
+        <div style={blueSquare}>3</div>
+      </Anime>
+    </div>
   )
 }
 
