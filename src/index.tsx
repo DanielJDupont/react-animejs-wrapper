@@ -4,8 +4,8 @@ import anime, { AnimeInstance } from 'animejs';
 interface AnimeProps {
   className?: string;
   style?: object;
-  animeConfig: any;
-  children: React.ReactNode;
+  animeConfig?: any;
+  children?: React.ReactNode;
 }
 
 // Need to use a forwardRef, obtaining a ref from the parent to allow the use of controls.
