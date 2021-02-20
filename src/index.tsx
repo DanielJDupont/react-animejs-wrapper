@@ -4,7 +4,7 @@ import anime, { AnimeInstance } from 'animejs';
 interface AnimeProps {
   className?: string;
   style?: object;
-  animeConfig?: any;
+  config?: any;
   children?: React.ReactNode;
 }
 
@@ -26,11 +26,11 @@ const Anime = forwardRef((props: AnimeProps, ref) => {
 
     const myAnimeInstance = anime({
       targets: document.querySelectorAll('.__anime__'),
-      ...props.animeConfig,
+      ...props.config,
     });
 
     animeInstance.current = myAnimeInstance;
-  }, [props, props.animeConfig, props.children]);
+  }, [props, props.config, props.children]);
 
   useEffect(() => {
     console.log(animeInstance);
