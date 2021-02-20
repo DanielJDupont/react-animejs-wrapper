@@ -38,13 +38,13 @@ You need to install react-animejs-wrapper and it's dependency animejs.
 Using npm:
 
 ```sh
-npm i react-animejs-wrapper animejs
+npm i react-animejs-wrapper
 ```
 
 Using yarn:
 
 ```sh
-yarn add react-animejs-wrapper animejs
+yarn add react-animejs-wrapper
 ```
 
 Designed for React 17.0.1. It should work for any relatively recent version of React.
