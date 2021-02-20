@@ -6,9 +6,9 @@ The package has not been properly configured to allow others to install and use 
 
 Features are still being developed locally, some features that are working locally include:
 
-- The ability to easily copy everything in the `anime()` constructor examples from [the Anime.js documentation](https://animejs.com/documentation) into the animeConfig of the `<Anime animeConfig={}></Anime>` components.
+- The ability to easily copy everything in the `anime()` constructor examples from [the Anime.js documentation](https://animejs.com/documentation) into the config of the `<Anime config={}></Anime>` components.
 
-- No need to specify the 'targets' field in `animeConfig={}` as the target css selectors will be automatically created for the child elements of `<Anime></Anime>` components. The default css target generator can be overriden and done manually by simply providing your own targets field in the `animeConfig={}` object if needed.
+- No need to specify the 'targets' field in `config={}` as the target css selectors will be automatically created for the child elements of `<Anime></Anime>` components. The default css target generator can be overriden and done manually by simply providing your own targets field in the `config={}` object if needed.
 
 - The ability to use the Anime.js controls with a simple `const myRef = useRef(null)` attached to the `<Anime ref={myRef}></Anime>` component, allowing you to control that animation with the following:
   
@@ -66,7 +66,7 @@ export const myAnimeComponent = () => {
 
   return (
     <Anime
-      animeConfig={{
+      config={{
         translateX: 250,
         delay: function (_, i) {
           return i * 100;
@@ -113,7 +113,7 @@ export const myAnimeComponent = () => {
     <div>
       <Anime
         ref={animatedSquaresRef}
-        animeConfig={{
+        config={{
           translateX: 250,
           delay: function (_, i) {
             return i * 100;
