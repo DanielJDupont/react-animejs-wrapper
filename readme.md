@@ -97,7 +97,7 @@ export const myAnimeComponent = () => {
   const blueSquare = {
     height: '20px',
     width: '20px',
-    backgroundColor: 'lightGreen',
+    backgroundColor: 'lightBlue',
   };
 
   const animatedSquaresRef = useRef(null)
