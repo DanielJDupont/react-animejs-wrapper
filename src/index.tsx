@@ -70,4 +70,5 @@ const Anime = forwardRef((props: AnimeProps, ref) => {
   );
 });
 
-export default Anime;
+// Expose anime to the user so they can do things such as anime.random(0, 270) for the config for Anime components.
+export { Anime as default, anime };
