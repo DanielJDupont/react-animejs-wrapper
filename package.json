@@ -28,8 +28,6 @@
     "animejs": "^3.2.1",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
-    "react": "link:/home/dan/Desktop/interactive_graph_algorithm_visualizer/node_modules/react",
-    "react-dom": "link:/home/dan/Desktop/interactive_graph_algorithm_visualizer/node_modules/react-dom",
     "rollup": "^2.39.0",
     "rollup-plugin-sass": "^1.2.2",
     "rollup-plugin-typescript2": "^0.30.0",
