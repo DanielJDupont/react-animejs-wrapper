@@ -4,6 +4,12 @@
 
 The package has not been properly configured to allow others to install and use it.
 
+A website is currently being made to contains lots of practical examples of how to use this library.
+
+A major bug is that only one <Anime></Anime> instance can be used at any given time, that will be fixed soon.
+
+A prominent bug is how hotloading seems to meddle with the parameters of currently existing anime() instances, causing the animations to change behaviour. This is easy to deal with by refreshing the page. This may have been fixed now.
+
 Features are still being developed locally, some features that are working locally include:
 
 - The ability to easily copy everything in the `anime()` constructor examples from [the Anime.js documentation](https://animejs.com/documentation) into the config of the `<Anime config={}></Anime>` components.
@@ -21,7 +27,7 @@ Features are still being developed locally, some features that are working local
   myRef.current.seekPercent(percentage)
   ```
 
-A prominent bug is how hotloading seems to meddle with the parameters of currently existing anime() instances, causing the animations to change behaviour. This is easy to deal with by refreshing the page.
+
 
 ## React Animejs Wrapper
 
