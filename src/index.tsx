@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, forwardRef, useImperativeHandle } from 'react';
 import anime, { AnimeInstance } from 'animejs';
+import { v4 as uuidv4 } from 'uuid';
 
 interface AnimeProps {
   className?: string;
@@ -14,27 +15,20 @@ const Anime = forwardRef((props: AnimeProps, ref) => {
     return <div className={props.className} />;
   }
 
-  console.log(props.children);
-
   const animeInstance = useRef<AnimeInstance>(anime({}));
+  const uuid = uuidv4();
 
   useEffect(() => {
-    console.log(document.querySelectorAll('.__anime__'));
-
     // Cleanup any other wandering anime tags.
-    anime.remove('.__anime__');
+    anime.remove(`.__anime__${uuid}`);
 
     const myAnimeInstance = anime({
-      targets: document.querySelectorAll('.__anime__'),
+      targets: document.querySelectorAll(`.__anime__${uuid}`),
       ...props.config,
     });
 
     animeInstance.current = myAnimeInstance;
   }, [props, props.config, props.children]);
-
-  useEffect(() => {
-    console.log(animeInstance);
-  }, [animeInstance]);
 
   // Setup controls here.
   useImperativeHandle(ref, () => ({
@@ -64,7 +58,8 @@ const Anime = forwardRef((props: AnimeProps, ref) => {
     <div className={props.className} style={{ ...props.style }}>
       {childArray.map((child) => (
         // Wrap the user's elements with a div containing the __anime__ tag so we can apply the animations to them.
-        <div className="__anime__">{child}</div>
+
+        <div className={`__anime__${uuid}`}>{child}</div>
       ))}
     </div>
   );
