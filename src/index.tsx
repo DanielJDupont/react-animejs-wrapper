@@ -52,16 +52,21 @@ const Anime = forwardRef((props: AnimeProps, ref) => {
     },
   }));
 
+  //
   const childArray = Array.isArray(props.children) ? props.children : [props.children];
 
   return (
-    <div className={props.className} style={{ ...props.style }}>
+    <>
       {childArray.map((child) => (
         // Wrap the user's elements with a div containing the __anime__ tag so we can apply the animations to them.
-
-        <div className={`__anime__${uuid}`}>{child}</div>
+        // The position absolute seems needed to keep the div constrained around what is being animated.
+        <div style={{ position: 'relative', height: '50px' }}>
+          <div style={{ position: 'absolute', ...props.style }} className={`__anime__${uuid}` + ` ${props.className}`}>
+            {child}
+          </div>
+        </div>
       ))}
-    </div>
+    </>
   );
 });
 
