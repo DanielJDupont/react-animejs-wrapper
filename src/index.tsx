@@ -59,7 +59,7 @@ const Anime = forwardRef((props: AnimeProps, ref) => {
   const styleChildren = (children: any) => {
     return React.Children.map(children, (child) =>
       React.cloneElement(child, {
-        className: `__anime__${uuid}`,
+        className: `${child?.props?.className} __anime__${uuid}`,
       }),
     );
   };
