@@ -4,7 +4,7 @@
 
  A website is currently being made to contains lots of practical examples of how to use this library.
 
-Core features are still being developed, some include:
+Some features include:
 
 - The ability to easily copy everything in the `anime()` constructor examples from [the Anime.js documentation](https://animejs.com/documentation) into the config of the `<Anime config={}></Anime>` components.
 
@@ -23,7 +23,7 @@ Core features are still being developed, some include:
 
 ## React Animejs Wrapper
 
-Allows the use of Anime.js with React JSX elements to quickly and easily create powerful animations. :smiley:
+Allows the use of Anime.js with React JSX elements to quickly and easily create powerful animations.
 
 ## Installation
 
@@ -43,35 +43,66 @@ yarn add react-animejs-wrapper
 
 Once the website is up there will be lots of easy to use examples for you to explore!
 
-Some blue squares sliding back and forth:
+Translate elements, like with the text in an input.
 
 ```jsx
 import React from 'react'
 import Anime from 'react-animejs-wrapper'
 
 export const myAnimeComponent = () => {
-  const blueSquare = {
-    height: '20px',
-    width: '20px',
-    backgroundColor: 'lightblue',
-  };
 
   return (
     <Anime
+      style={{
+        backgroundColor: 'lightgrey',
+        width: '80px',
+      }}
       config={{
-        translateX: 250,
-        delay: function (_, i) {
-          return i * 100;
-        },
+        translateY: [0, 20],
+        scale: [0.8, 1],
         loop: true,
-        direction: 'alternate',
-        easing: 'easeInOutSine',
-        autoplay: true,
+        duration: 1500,
       }}
     >
-      <div style={blueSquare}>1</div>
-      <div style={blueSquare}>2</div>
-      <div style={blueSquare}>3</div>
+      <div>Find</div>
+    </Anime>
+  )
+}
+```
+
+Stagger multiple elements, such as in a sidebar.
+
+```jsx
+import React from 'react'
+import Anime from 'react-animejs-wrapper'
+
+export const myAnimeComponent = () => {
+
+  return (
+    <Anime
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        backgroundColor: 'lightgrey',
+        alignItems: 'left',
+        width: '80px',
+      }}
+      config={{
+        translateX: [-35, 0],
+        scale: [0, 1],
+        loop: true,
+        delay: anime.stagger(100, { start: 200 }),
+      }}
+    >
+      <div style={{ backgroundColor: 'grey', width: '50px', margin: '5px' }}>
+        Transit
+      </div>
+      <div style={{ backgroundColor: 'grey', width: '50px', margin: '5px' }}>
+        Food
+      </div>
+      <div style={{ backgroundColor: 'grey', width: '50px', margin: '5px' }}>
+        Events
+      </div>
     </Anime>
   )
 }
@@ -102,7 +133,7 @@ export const myAnimeComponent = () => {
   const seekPercent = () => animatedSquaresRef.current.seekPercent(50);
 
   return (
-    <div>
+    <>
       <Anime
         ref={animatedSquaresRef}
         config={{
@@ -126,7 +157,7 @@ export const myAnimeComponent = () => {
       <button onClick={reverse}>Reverse Animation</button>
       <button onClick={seek}>Seek to 1000 ms</button>
       <button onClick={seekPercent}>Seek to 50%</button>
-    </div>
+    </>
   )
 }
 
