@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 interface AnimeProps {
   className?: string;
-  style?: object;
+  style?: React.CSSProperties;
   config?: any;
   children?: React.ReactNode;
 }
@@ -12,7 +12,7 @@ interface AnimeProps {
 // Need to use a forwardRef, obtaining a ref from the parent to allow the use of controls.
 const Anime = forwardRef((props: AnimeProps, ref) => {
   if (typeof window === 'undefined') {
-    return <div className={props.className} />;
+    return <div className={props.className} style={props.style} />;
   }
 
   const animeInstance = useRef<AnimeInstance>(anime({}));
@@ -30,7 +30,7 @@ const Anime = forwardRef((props: AnimeProps, ref) => {
     animeInstance.current = myAnimeInstance;
   }, [props, props.config, props.children]);
 
-  // Setup controls here.
+  // Setup controls here, the user can access these if they use a ref.
   useImperativeHandle(ref, () => ({
     restart() {
       animeInstance.current.restart();
@@ -52,23 +52,26 @@ const Anime = forwardRef((props: AnimeProps, ref) => {
     },
   }));
 
-  //
+  // Ensure that props.children is always an array so .map works.
   const childArray = Array.isArray(props.children) ? props.children : [props.children];
 
+  // Attach __anime__id to each child so Anime.js can track and manipulate the elements.
+  const styleChildren = (children: any) => {
+    return React.Children.map(children, (child) =>
+      React.cloneElement(child, {
+        className: `__anime__${uuid}`,
+      }),
+    );
+  };
+
   return (
-    <>
-      {childArray.map((child) => (
-        // Wrap the user's elements with a div containing the __anime__ tag so we can apply the animations to them.
-        // The position absolute seems needed to keep the div constrained around what is being animated.
-        <div style={{ position: 'relative', height: '50px' }}>
-          <div style={{ position: 'absolute', ...props.style }} className={`__anime__${uuid}` + ` ${props.className}`}>
-            {child}
-          </div>
-        </div>
-      ))}
-    </>
+    // This outer <div></div> appears as <Anime></Anime> to the user.
+    <div style={{ ...props.style }} className={`${props.className}`}>
+      {/* The children are the individual components or divs that the user passes in. */}
+      {styleChildren(childArray)}
+    </div>
   );
 });
 
-// Expose anime to the user so they can do things such as anime.random(0, 270) for the config for Anime components.
+// Expose anime to the user so they can do things such as anime.random(0, 270) for the config for Anime components if they want.
 export { Anime as default, anime };
