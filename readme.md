@@ -11,15 +11,15 @@ Some features include:
 - No need to specify the 'targets' field in `config={}` as the targets will be automatically created internally for the child elements of `<Anime></Anime>` components. You can override this if needed.
 
 - The ability to use the Anime.js controls with a simple `const myRef = useRef(null)` attached to the `<Anime ref={myRef}></Anime>` component, allowing you to control that animation with the following:
-  
-  ```jsx
-  myRef.current.play()
-  myRef.current.pause()
-  myRef.current.restart()
-  myRef.current.reverse()
-  myRef.current.seek(miliseconds)
-  myRef.current.seekPercent(percentage)
-  ```
+
+```jsx
+myRef.current.play()
+myRef.current.pause()
+myRef.current.restart()
+myRef.current.reverse()
+myRef.current.seek(miliseconds)
+myRef.current.seekPercent(percentage)
+```
 
 ## React Animejs Wrapper
 
