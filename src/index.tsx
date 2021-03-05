@@ -56,6 +56,7 @@ const Anime = forwardRef((props: AnimeProps, ref) => {
   const childArray = Array.isArray(props.children) ? props.children : [props.children];
 
   // Attach __anime__id to each child so Anime.js can track and manipulate the elements.
+  // Note that it is important that every child has a unique key prop or else hotloading will produce strange behaviour.
   const styleChildren = (children: any) => {
     return React.Children.map(children, (child, key) =>
       React.cloneElement(child, {

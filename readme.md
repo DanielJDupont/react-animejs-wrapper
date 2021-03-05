@@ -1,8 +1,6 @@
-# :construction: Under Construction :construction:
+# React Anime.js Wrapper
 
-**This npm package is not ready for use and is still under early development. :seedling:**
-
- A website is currently being made to contains lots of practical examples of how to use this library.
+**Check out the website to see more examples: [reactanimejswrapper.com](https://reactanimejswrapper.com)**
 
 Some features include:
 
