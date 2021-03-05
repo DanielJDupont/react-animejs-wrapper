@@ -23,6 +23,8 @@ myRef.current.seekPercent(percentage)
 
 Allows the use of Anime.js with React JSX elements to quickly and easily create powerful animations.
 
+![react animejs example animation](https://github.com/DanielJDupont/react-animejs-wrapper-website/tree/main/images/bigAnimation.gif)
+
 ## Installation
 
 Using npm:
