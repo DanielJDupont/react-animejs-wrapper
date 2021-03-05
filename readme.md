@@ -1,5 +1,9 @@
 # React Anime.js Wrapper
 
+![react animejs example animation](https://github.com/DanielJDupont/react-animejs-wrapper-website/blob/main/images/bigAnimation.gif?raw=true)
+
+Allows the use of Anime.js with React JSX elements to quickly and easily create powerful animations.
+
 **Check out the website to see more examples: [reactanimejswrapper.com](https://reactanimejswrapper.com)**
 
 Some features include:
@@ -18,12 +22,6 @@ myRef.current.reverse()
 myRef.current.seek(miliseconds)
 myRef.current.seekPercent(percentage)
 ```
-
-## React Animejs Wrapper
-
-Allows the use of Anime.js with React JSX elements to quickly and easily create powerful animations.
-
-![react animejs example animation](https://github.com/DanielJDupont/react-animejs-wrapper-website/tree/main/images/bigAnimation.gif)
 
 ## Installation
 
