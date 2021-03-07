@@ -1,6 +1,6 @@
 {
   "name": "react-animejs-wrapper",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "A React wrapper for the Anime.js animation library. Allows for the quick and easy creation of powerful animations using React's JSX tags.",
   "author": "Daniel Dupont",
   "license": "ISC",
@@ -44,16 +44,18 @@
   ],
   "keywords": [
     "react",
-    "typescript",
-    "npm",
-    "wrapper",
-    "animation",
-    "animations",
-    "nextjs",
-    "npm-package",
-    "wrapper-api",
+    "reactjs",
+    "react.js",
     "animejs",
     "anime.js",
-    "anime"
+    "anime",
+    "wrapper",
+    "wrapper-api",
+    "animation",
+    "animations",
+    "typescript",
+    "next",
+    "nextjs",
+    "next.js"
   ]
 }
