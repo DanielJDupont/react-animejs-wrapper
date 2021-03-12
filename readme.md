@@ -1,6 +1,6 @@
 # React Anime.js Wrapper
 
-[![Build Status](https://travis-ci.com/DanielJDupont/react-animejs-wrapper.svg?branch=main)](https://travis-ci.com/DanielJDupont/react-animejs-wrapper) ![Codecov](https://img.shields.io/codecov/c/gh/danieljdupont/react-animejs-wrapper) ![GitHub top language](https://img.shields.io/github/languages/top/danieljdupont/react-animejs-wrapper) ![GitHub repo size](https://img.shields.io/github/repo-size/danieljdupont/react-animejs-wrapper) ![Website](https://img.shields.io/website?url=https%3A%2F%2Freactanimejswrapper.com%2F) ![GitHub](https://img.shields.io/github/license/danieljdupont/react-animejs-wrapper?style=flat-square) 
+[![Build Status](https://travis-ci.com/DanielJDupont/react-animejs-wrapper.svg?branch=main)]([travisUrl]) ![Codecov][codecovUrl] ![GitHub top language][toplangUrl] ![GitHub repo size][sizeUrl] ![Website][websiteUrl] ![GitHub][githubUrl]
 
 ![react animejs example animation](https://github.com/DanielJDupont/react-animejs-wrapper-website/blob/main/images/bigAnimation.gif?raw=true)
 
@@ -162,3 +162,10 @@ export const myAnimeComponent = () => {
 }
 
 ```
+
+[travisUrl]: https://travis-ci.com/DanielJDupont/react-animejs-wrapper
+[codecovUrl]: https://img.shields.io/codecov/c/gh/danieljdupont/react-animejs-wrapper
+[toplangUrl]: https://img.shields.io/github/languages/top/danieljdupont/react-animejs-wrapper
+[sizeUrl]: https://img.shields.io/github/repo-size/danieljdupont/react-animejs-wrapper
+[websiteUrl]: https://img.shields.io/website?url=https%3A%2F%2Freactanimejswrapper.com%2F
+[githubUrl]: https://img.shields.io/github/license/danieljdupont/react-animejs-wrapper?style=flat-square
