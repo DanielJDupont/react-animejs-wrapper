@@ -1,9 +1,9 @@
 {
   "name": "react-animejs-wrapper",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "A React wrapper for the Anime.js animation library. Allows for the quick and easy creation of powerful animations using React's JSX tags.",
   "author": "Daniel Dupont",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://reactanimejswrapper.com",
   "repository": "https://github.com/DanielJDupont/react-animejs-wrapper",
   "main": "dist/index.js",
