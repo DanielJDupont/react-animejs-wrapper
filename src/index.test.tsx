@@ -1,10 +1,5 @@
-// @ts-ignore
 import React from 'react';
-
-// @ts-ignore
 import { cleanup, render } from '@testing-library/react';
-
-// @ts-ignore
 import Anime from './index';
 
 // Note: running cleanup afterEach is done automatically for you in @testing-library/react@9.0.0 or higher

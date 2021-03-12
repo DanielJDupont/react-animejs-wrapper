@@ -11,6 +11,8 @@ before_install:
   - yarn
 before_script:
   - yarn
+  - yarn add react
+  - yarn add react-dom
   - rm dist -rf
 script:
   - yarn build
