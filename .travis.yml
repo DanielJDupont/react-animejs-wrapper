@@ -8,15 +8,15 @@ notifications:
 node_js:
   - '14'
 before_install:
-  - npm i
+  - yarn
 before_script:
-  - npm prune
+  - yarn
   - rm dist -rf
 script:
-  - npm run build
-  - npm run test
+  - yarn build
+  - yarn test
 after_success:
-- npm run coverage
+- yarn coverage
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"
