@@ -50,3 +50,4 @@ typings/
 
 # generate output
 dist
+.env
