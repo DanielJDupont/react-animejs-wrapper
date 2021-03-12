@@ -51,3 +51,6 @@ typings/
 # generate output
 dist
 .env
+
+
+test-coverage

@@ -16,15 +16,15 @@
     "start": "rollup -c -w",
     "test": "jest --coverage",
     "coverage": "nyc yarn test && nyc report --reporter=lcov && codecov",
-    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "coveralls": "jest --coverage && cat ./test-coverage/lcov.info | coveralls",
     "score": "node_modules/.bin/npm-score --diff",
     "preversion": "node_modules/.bin/npm-score --save-report --commit --quiet"
   },
   "jest": {
-    "coverageDirectory": "./coverage/",
+    "coverageDirectory": "./test-coverage/",
     "collectCoverage": true,
     "collectCoverageFrom": [
-      "src/**/*.ts"
+      "src/**/*.tsx"
     ]
   },
   "dependencies": {
