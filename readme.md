@@ -1,5 +1,5 @@
 # React Anime.js Wrapper
-[![Build Status](https://travis-ci.com/DanielJDupont/react-animejs-wrapper.svg?branch=main)](https://travis-ci.com/DanielJDupont/react-animejs-wrapper) ![GitHub](https://img.shields.io/github/license/danieljdupont/react-animejs-wrapper) ![GitHub repo size](https://img.shields.io/github/repo-size/danieljdupont/react-animejs-wrapper) ![GitHub top language](https://img.shields.io/github/languages/top/danieljdupont/react-animejs-wrapper) ![Website](https://img.shields.io/website?url=https%3A%2F%2Freactanimejswrapper.com%2F)
+[![Build Status](https://travis-ci.com/DanielJDupont/react-animejs-wrapper.svg?branch=main)](https://travis-ci.com/DanielJDupont/react-animejs-wrapper) ![GitHub repo size](https://img.shields.io/github/repo-size/danieljdupont/react-animejs-wrapper) ![GitHub top language](https://img.shields.io/github/languages/top/danieljdupont/react-animejs-wrapper) ![Website](https://img.shields.io/website?url=https%3A%2F%2Freactanimejswrapper.com%2F) ![GitHub](https://img.shields.io/github/license/danieljdupont/react-animejs-wrapper?style=flat-square)
 
 ![react animejs example animation](https://github.com/DanielJDupont/react-animejs-wrapper-website/blob/main/images/bigAnimation.gif?raw=true)
 
