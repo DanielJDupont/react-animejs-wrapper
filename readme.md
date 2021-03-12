@@ -1,4 +1,5 @@
 # React Anime.js Wrapper
+[![Build Status](https://travis-ci.com/DanielJDupont/react-animejs-wrapper.svg?branch=main)](https://travis-ci.com/DanielJDupont/react-animejs-wrapper)
 
 ![react animejs example animation](https://github.com/DanielJDupont/react-animejs-wrapper-website/blob/main/images/bigAnimation.gif?raw=true)
 
