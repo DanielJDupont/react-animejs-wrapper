@@ -14,11 +14,11 @@
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w",
-    "score": "node_modules/.bin/npm-score --diff",
     "test": "jest --coverage",
-    "coverage": "nyc npm test && nyc report --reporter=lcov && codecov",
-    "preversion": "node_modules/.bin/npm-score --save-report --commit --quiet",
-    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
+    "coverage": "nyc yarn test && nyc report --reporter=lcov && codecov",
+    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls",
+    "score": "node_modules/.bin/npm-score --diff",
+    "preversion": "node_modules/.bin/npm-score --save-report --commit --quiet"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
@@ -54,6 +54,7 @@
     "babel-runtime": "^6.26.0",
     "coveralls": "^3.1.0",
     "jest": "^26.6.3",
+    "nyc": "^15.1.0",
     "react": "link:/home/dan/Desktop/test-react-animejs-wrapper/local-package/node_modules/react",
     "react-dom": "link:/home/dan/Desktop/test-react-animejs-wrapper/local-package/node_modules/react-dom",
     "react-test-renderer": "^17.0.1",
