@@ -1,0 +1,253 @@
+{
+  "query": "https://api.npms.io/v2/package/react-animejs-wrapper",
+  "result": {
+    "analyzedAt": "2021-03-12T20:43:01.111Z",
+    "collected": {
+      "metadata": {
+        "name": "react-animejs-wrapper",
+        "scope": "unscoped",
+        "version": "1.0.29",
+        "description": "A React wrapper for the Anime.js animation library. Allows for the quick and easy creation of powerful animations using React's JSX tags.",
+        "keywords": [
+          "react",
+          "reactjs",
+          "react.js",
+          "animejs",
+          "anime.js",
+          "anime",
+          "wrapper",
+          "wrapper-api",
+          "animation",
+          "animations",
+          "typescript",
+          "next",
+          "nextjs",
+          "next.js"
+        ],
+        "date": "2021-03-12T20:38:06.203Z",
+        "author": {
+          "name": "Daniel Dupont"
+        },
+        "publisher": {
+          "username": "danieljdupont",
+          "email": "ddupont2@uwo.ca"
+        },
+        "maintainers": [
+          {
+            "username": "danieljdupont",
+            "email": "ddupont2@uwo.ca"
+          }
+        ],
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/DanielJDupont/react-animejs-wrapper.git"
+        },
+        "links": {
+          "npm": "https://www.npmjs.com/package/react-animejs-wrapper",
+          "homepage": "https://reactanimejswrapper.com/",
+          "repository": "https://github.com/DanielJDupont/react-animejs-wrapper",
+          "bugs": "https://github.com/DanielJDupont/react-animejs-wrapper/issues"
+        },
+        "license": "MIT",
+        "dependencies": {
+          "animejs": "^3.2.1",
+          "npm-score": "^1.1.1",
+          "uuid": "^8.3.2"
+        },
+        "devDependencies": {
+          "@babel/preset-env": "^7.13.10",
+          "@babel/preset-react": "^7.12.13",
+          "@babel/preset-typescript": "^7.13.0",
+          "@rollup/plugin-commonjs": "^17.1.0",
+          "@rollup/plugin-node-resolve": "^11.2.0",
+          "@testing-library/react": "^11.2.5",
+          "@types/animejs": "^3.1.2",
+          "@types/jest": "^26.0.20",
+          "@types/react": "^17.0.1",
+          "@types/react-dom": "^17.0.1",
+          "@types/uuid": "^8.3.0",
+          "babel-core": "^6.26.3",
+          "babel-jest": "^26.6.3",
+          "babel-runtime": "^6.26.0",
+          "coveralls": "^3.1.0",
+          "codecov": "^3.8.1",
+          "jest": "^26.6.3",
+          "nyc": "^15.1.0",
+          "react": "link:../test-react-animejs-wrapper/local-package/node_modules/react",
+          "react-dom": "link:../test-react-animejs-wrapper/local-package/node_modules/react-dom",
+          "react-test-renderer": "^17.0.1",
+          "rollup": "^2.39.0",
+          "rollup-plugin-sass": "^1.2.2",
+          "rollup-plugin-typescript2": "^0.30.0",
+          "typescript": "^4.1.5"
+        },
+        "peerDependencies": {
+          "react": "^17.0.1",
+          "react-dom": "^17.0.1"
+        },
+        "releases": [
+          {
+            "from": "2021-02-10T00:00:00.000Z",
+            "to": "2021-03-12T00:00:00.000Z",
+            "count": 26
+          },
+          {
+            "from": "2020-12-12T00:00:00.000Z",
+            "to": "2021-03-12T00:00:00.000Z",
+            "count": 26
+          },
+          {
+            "from": "2020-09-13T00:00:00.000Z",
+            "to": "2021-03-12T00:00:00.000Z",
+            "count": 26
+          },
+          {
+            "from": "2020-03-12T00:00:00.000Z",
+            "to": "2021-03-12T00:00:00.000Z",
+            "count": 26
+          },
+          {
+            "from": "2019-03-13T00:00:00.000Z",
+            "to": "2021-03-12T00:00:00.000Z",
+            "count": 26
+          }
+        ],
+        "hasTestScript": true,
+        "hasSelectiveFiles": true,
+        "readme": "# React Anime.js Wrapper\n\n[![Build Status](https://travis-ci.com/DanielJDupont/react-animejs-wrapper.svg?branch=main)]([travisUrl]) ![Codecov][codecovUrl] ![GitHub top language][toplangUrl] ![GitHub repo size][sizeUrl] ![Website][websiteUrl] ![GitHub][githubUrl]\n\n![react animejs example animation](https://github.com/DanielJDupont/react-animejs-wrapper-website/blob/main/images/bigAnimation.gif?raw=true)\n\nAllows the use of Anime.js with React JSX elements to quickly and easily create powerful animations.\n\n**Check out the website to see more examples: [reactanimejswrapper.com](https://reactanimejswrapper.com)**\n\nSome features include:\n\n- The ability to easily copy everything in the `anime()` constructor examples from [the Anime.js documentation](https://animejs.com/documentation) into the config of the `<Anime config={}></Anime>` components.\n\n- No need to specify the 'targets' field in `config={}` as the targets will be automatically created internally for the child elements of `<Anime></Anime>` components. You can override this if needed.\n\n- The ability to use the Anime.js controls with a simple `const myRef = useRef(null)` attached to the `<Anime ref={myRef}></Anime>` component, allowing you to control that animation with the following:\n\n```jsx\nmyRef.current.play()\nmyRef.current.pause()\nmyRef.current.restart()\nmyRef.current.reverse()\nmyRef.current.seek(miliseconds)\nmyRef.current.seekPercent(percentage)\n```\n\n## Installation\n\nUsing npm:\n\n```sh\nnpm i react-animejs-wrapper\n```\n\nUsing yarn:\n\n```sh\nyarn add react-animejs-wrapper\n```\n\n## Easy to Use Examples\n\nOnce the website is up there will be lots of easy to use examples for you to explore!\n\nTranslate elements, like with the text in an input.\n\n```jsx\nimport React from 'react'\nimport Anime from 'react-animejs-wrapper'\n\nexport const myAnimeComponent = () => {\n\n  return (\n    <Anime\n      style={{\n        backgroundColor: 'lightgrey',\n        width: '80px',\n      }}\n      config={{\n        translateY: [0, 20],\n        scale: [0.8, 1],\n        loop: true,\n        duration: 1500,\n      }}\n    >\n      <div>Find</div>\n    </Anime>\n  )\n}\n```\n\nStagger multiple elements, such as in a sidebar.\n\n```jsx\nimport React from 'react'\nimport Anime from 'react-animejs-wrapper'\n\nexport const myAnimeComponent = () => {\n\n  return (\n    <Anime\n      style={{\n        display: 'flex',\n        flexDirection: 'column',\n        backgroundColor: 'lightgrey',\n        alignItems: 'left',\n        width: '80px',\n      }}\n      config={{\n        translateX: [-35, 0],\n        scale: [0, 1],\n        loop: true,\n        delay: anime.stagger(100, { start: 200 }),\n      }}\n    >\n      <div style={{ backgroundColor: 'grey', width: '50px', margin: '5px' }}>\n        Transit\n      </div>\n      <div style={{ backgroundColor: 'grey', width: '50px', margin: '5px' }}>\n        Food\n      </div>\n      <div style={{ backgroundColor: 'grey', width: '50px', margin: '5px' }}>\n        Events\n      </div>\n    </Anime>\n  )\n}\n```\n\n## Examples with Animation Controls\n\nAttach a reference to the <Anime></Anime> component, then you can access the controls within the component directly through the reference.\n\n```jsx\nimport React, { useRef } from 'react'\nimport Anime from 'react-animejs-wrapper'\n\nexport const myAnimeComponent = () => {\n  const blueSquare = {\n    height: '20px',\n    width: '20px',\n    backgroundColor: 'lightBlue',\n  };\n\n  const animatedSquaresRef = useRef(null)\n\n  const restart = () => animatedSquaresRef.current.restart();\n  const play = () => animatedSquaresRef.current.play();\n  const pause = () => animatedSquaresRef.current.pause();\n  const reverse = () => animatedSquaresRef.current.reverse();\n  const seek = () => animatedSquaresRef.current.seek(1000);\n  const seekPercent = () => animatedSquaresRef.current.seekPercent(50);\n\n  return (\n    <>\n      <Anime\n        ref={animatedSquaresRef}\n        config={{\n          translateX: 250,\n          delay: function (_, i) {\n            return i * 100;\n          },\n          loop: true,\n          direction: 'alternate',\n          easing: 'easeInOutSine',\n          autoplay: true,\n        }}\n      >\n        <div style={blueSquare}>1</div>\n        <div style={blueSquare}>2</div>\n        <div style={blueSquare}>3</div>\n      </Anime>\n      <button onClick={restart}>Reset Animation</button>\n      <button onClick={play}>Play Animation</button>\n      <button onClick={pause}>Pause Animation</button>\n      <button onClick={reverse}>Reverse Animation</button>\n      <button onClick={seek}>Seek to 1000 ms</button>\n      <button onClick={seekPercent}>Seek to 50%</button>\n    </>\n  )\n}\n\n```\n\n[travisUrl]: https://travis-ci.com/DanielJDupont/react-animejs-wrapper\n[codecovUrl]: https://img.shields.io/codecov/c/gh/danieljdupont/react-animejs-wrapper\n[toplangUrl]: https://img.shields.io/github/languages/top/danieljdupont/react-animejs-wrapper\n[sizeUrl]: https://img.shields.io/github/repo-size/danieljdupont/react-animejs-wrapper\n[websiteUrl]: https://img.shields.io/website?url=https%3A%2F%2Freactanimejswrapper.com%2F\n[githubUrl]: https://img.shields.io/github/license/danieljdupont/react-animejs-wrapper?style=flat-square"
+      },
+      "npm": {
+        "downloads": [
+          {
+            "from": "2021-03-11T00:00:00.000Z",
+            "to": "2021-03-12T00:00:00.000Z",
+            "count": 50
+          },
+          {
+            "from": "2021-03-05T00:00:00.000Z",
+            "to": "2021-03-12T00:00:00.000Z",
+            "count": 646
+          },
+          {
+            "from": "2021-02-10T00:00:00.000Z",
+            "to": "2021-03-12T00:00:00.000Z",
+            "count": 1502
+          },
+          {
+            "from": "2020-12-12T00:00:00.000Z",
+            "to": "2021-03-12T00:00:00.000Z",
+            "count": 1502
+          },
+          {
+            "from": "2020-09-13T00:00:00.000Z",
+            "to": "2021-03-12T00:00:00.000Z",
+            "count": 1502
+          },
+          {
+            "from": "2020-03-12T00:00:00.000Z",
+            "to": "2021-03-12T00:00:00.000Z",
+            "count": 1502
+          }
+        ],
+        "dependentsCount": 0,
+        "starsCount": 0
+      },
+      "github": {
+        "starsCount": 0,
+        "forksCount": 0,
+        "subscribersCount": 1,
+        "issues": {
+          "count": 9,
+          "openCount": 5,
+          "distribution": {
+            "3600": 3,
+            "10800": 0,
+            "32400": 0,
+            "97200": 1,
+            "291600": 5,
+            "874800": 0,
+            "2624400": 0,
+            "7873200": 0,
+            "23619600": 0,
+            "70858800": 0,
+            "212576400": 0
+          },
+          "isDisabled": false
+        },
+        "contributors": [
+          {
+            "username": "DanielJDupont",
+            "commitsCount": 133
+          }
+        ],
+        "commits": [
+          {
+            "from": "2021-03-05T00:00:00.000Z",
+            "to": "2021-03-12T00:00:00.000Z",
+            "count": 32
+          },
+          {
+            "from": "2021-02-10T00:00:00.000Z",
+            "to": "2021-03-12T00:00:00.000Z",
+            "count": 133
+          },
+          {
+            "from": "2020-12-12T00:00:00.000Z",
+            "to": "2021-03-12T00:00:00.000Z",
+            "count": 133
+          },
+          {
+            "from": "2020-09-13T00:00:00.000Z",
+            "to": "2021-03-12T00:00:00.000Z",
+            "count": 133
+          },
+          {
+            "from": "2020-03-12T00:00:00.000Z",
+            "to": "2021-03-12T00:00:00.000Z",
+            "count": 133
+          }
+        ]
+      },
+      "source": {
+        "files": {
+          "readmeSize": 5138,
+          "testsSize": 511,
+          "hasNpmIgnore": true
+        },
+        "linters": [
+          "prettier",
+          "tslint"
+        ],
+        "coverage": 0.57
+      }
+    },
+    "evaluation": {
+      "quality": {
+        "carefulness": 0.9199999999999999,
+        "tests": 0.6855,
+        "health": 1,
+        "branding": 0.4
+      },
+      "popularity": {
+        "communityInterest": 2,
+        "downloadsCount": 500.6666666666667,
+        "downloadsAcceleration": 12.545243531202438,
+        "dependentsCount": 0
+      },
+      "maintenance": {
+        "releasesFrequency": 1,
+        "commitsFrequency": 1,
+        "openIssues": 0.9,
+        "issuesDistribution": 1
+      }
+    },
+    "score": {
+      "final": 0.644663761989408,
+      "detail": {
+        "quality": 0.9450181715220665,
+        "popularity": 0.03191022324811938,
+        "maintenance": 0.9999706639884178
+      }
+    }
+  }
+}
