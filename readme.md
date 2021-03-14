@@ -8,13 +8,15 @@ Allows the use of Anime.js with React JSX elements to quickly and easily create 
 
 **Check out the website to see more examples: [reactanimejswrapper.com](https://reactanimejswrapper.com)**
 
-Some features include:
+Features:
+
+- Can nest `<Anime>< /Anime>` components within one another to make complex nested animations.
 
 - The ability to easily copy everything in the `anime()` constructor examples from [the Anime.js documentation](https://animejs.com/documentation) into the config of the `<Anime config={}></Anime>` components.
 
-- No need to specify the 'targets' field in `config={}` as the targets will be automatically created internally for the child elements of `<Anime></Anime>` components. You can override this if needed.
+- No need to specify the 'targets' field in `config={}` as the targets will be automatically created internally for the child elements of `<Anime></Anime>`. You can override and specify your own targets if needed.
 
-- The ability to use the Anime.js controls with a simple `const myRef = useRef(null)` attached to the `<Anime ref={myRef}></Anime>` component, allowing you to control that animation with the following:
+- The ability to use the Anime.js controls with a ref `const myRef = useRef(null)` attached to the `<Anime ref={myRef}></Anime>` component, to control that animation with the following:
 
 ```jsx
 myRef.current.play()
@@ -41,7 +43,7 @@ yarn add react-animejs-wrapper
 
 ## Easy to Use Examples
 
-Once the website is up there will be lots of easy to use examples for you to explore!
+Some extra examples are present on the website with more to be added soon!
 
 Translate elements, like with the text in an input.
 
@@ -74,7 +76,7 @@ Stagger multiple elements, such as in a sidebar.
 
 ```jsx
 import React from 'react'
-import Anime from 'react-animejs-wrapper'
+import Anime, { anime } from 'react-animejs-wrapper'
 
 export const myAnimeComponent = () => {
 
