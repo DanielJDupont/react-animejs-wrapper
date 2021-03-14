@@ -1,6 +1,6 @@
 # React Anime.js Wrapper
 
-[![Build Status](https://travis-ci.com/DanielJDupont/react-animejs-wrapper.svg?branch=main)]([travisUrl]) ![Codecov][codecovUrl] ![GitHub top language][toplangUrl] ![GitHub repo size][sizeUrl] ![Website][websiteUrl] ![GitHub][githubUrl]
+[![Build Status](https://travis-ci.com/DanielJDupont/react-animejs-wrapper.svg?branch=main)]([travisUrl]) ![Codecov][codecovUrl] ![GitHub top language][toplangUrl] ![Website][websiteUrl] ![GitHub][githubUrl]
 
 ![react animejs example animation](https://github.com/DanielJDupont/react-animejs-wrapper-website/blob/main/images/bigAnimation.gif?raw=true)
 
